@@ -5,6 +5,13 @@ describe('wrap', () => {
   it('Returns empty string if empty string was provided', () => {
     expect(wrap('', 10)).to.equal('');
   });
+
+  it('Returns error message if the function is not passed a string', () => {
+    expect(wrap(5, 10)).to.equal('Line input must be a string.');
+  });
+  it('Returns a string', () => {
+    expect(typeof wrap('Hello!', 4)).to.equal('string');
+  });
 });
 
 /*we want to check that function is ..
